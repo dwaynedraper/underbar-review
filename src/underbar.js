@@ -42,6 +42,7 @@
     return n === undefined ? array[array.length - 1] : array.slice(array.length - n);
   };
 
+  /*************************************** */
   // Call iterator(value, key, collection) for each element of collection.
   // Accepts both arrays and objects.
   //
@@ -50,6 +51,7 @@
   _.each = function(collection, iterator) {
   };
 
+  /************************************* */
   // Returns the index at which value can be found in the array, or -1 if value
   // is not present in the array.
   _.indexOf = function(array, target) {
@@ -67,21 +69,24 @@
     return result;
   };
 
+  /*************************************** */
   // Return all elements of an array that pass a truth test.
   _.filter = function(collection, test) {
   };
 
+  /*************************************** */
   // Return all elements of an array that don't pass a truth test.
   _.reject = function(collection, test) {
     // TIP: see if you can re-use _.filter() here, without simply
     // copying code in and modifying it
   };
 
+  /*************************************** */
   // Produce a duplicate-free version of the array.
   _.uniq = function(array, isSorted, iterator) {
   };
 
-
+  /*************************************** */
   // Return the results of applying an iterator to each element.
   _.map = function(collection, iterator) {
     // map() is a useful primitive iteration function that works a lot
@@ -89,6 +94,7 @@
     // the members, it also maintains an array of results.
   };
 
+  /*************************************** */
   /*
    * TIP: map is really handy when you want to transform an array of
    * values into a new array of values. _.pluck() is solved for you
@@ -107,6 +113,7 @@
     });
   };
 
+  /*************************************** */
   // Reduces an array or object to a single value by repetitively calling
   // iterator(accumulator, item) for each item. accumulator should be
   // the return value of the previous iterator call.
@@ -130,6 +137,7 @@
   _.reduce = function(collection, iterator, accumulator) {
   };
 
+  /*************************************** */
   // Determine if the array or object contains a given value (using `===`).
   _.contains = function(collection, target) {
     // TIP: Many iteration problems can be most easily expressed in
@@ -142,19 +150,21 @@
     }, false);
   };
 
-
+  /*************************************** */
   // Determine whether all of the elements match a truth test.
   _.every = function(collection, iterator) {
     // TIP: Try re-using reduce() here.
   };
 
+  /*************************************** */
   // Determine whether any of the elements pass a truth test. If no iterator is
   // provided, provide a default one
   _.some = function(collection, iterator) {
     // TIP: There's a very clever way to re-use every() here.
   };
 
-
+  /*************************************** */
+  /*************************************** */
   /**
    * OBJECTS
    * =======
@@ -176,12 +186,14 @@
   _.extend = function(obj) {
   };
 
+  /*************************************** */
   // Like extend, but doesn't ever overwrite a key that already
   // exists in obj
   _.defaults = function(obj) {
   };
 
-
+  /*************************************** */
+  /*************************************** */
   /**
    * FUNCTIONS
    * =========
@@ -213,6 +225,7 @@
     };
   };
 
+  /*************************************** */
   // Memorize an expensive function's results by storing them. You may assume
   // that the function only takes primitives as arguments.
   // memoize could be renamed to oncePerUniqueArgumentList; memoize does the
@@ -224,6 +237,7 @@
   _.memoize = function(func) {
   };
 
+  /*************************************** */
   // Delays a function for the given number of milliseconds, and then calls
   // it with the arguments supplied.
   //
@@ -233,7 +247,8 @@
   _.delay = function(func, wait) {
   };
 
-
+  /*************************************** */
+  /*************************************** */
   /**
    * ADVANCED COLLECTION OPERATIONS
    * ==============================
@@ -247,7 +262,8 @@
   _.shuffle = function(array) {
   };
 
-
+  /*************************************** */
+  /*************************************** */
   /**
    * ADVANCED
    * =================
@@ -256,11 +272,13 @@
    * but nothing beyond here is required.
    */
 
+  /*************************************** */
   // Calls the method named by functionOrKey on each value in the list.
   // Note: You will need to learn a bit about .apply to complete this.
   _.invoke = function(collection, functionOrKey, args) {
   };
 
+  /*************************************** */
   // Sort the object's values by a criterion produced by an iterator.
   // If iterator is a string, sort objects by that property with the name
   // of that string. For example, _.sortBy(people, 'name') should sort
@@ -268,6 +286,7 @@
   _.sortBy = function(collection, iterator) {
   };
 
+  /*************************************** */
   // Zip together two or more arrays with elements of the same index
   // going together.
   //
@@ -276,6 +295,7 @@
   _.zip = function() {
   };
 
+  /*************************************** */
   // Takes a multidimensional array and converts it to a one-dimensional array.
   // The new array should contain all elements of the multidimensional array.
   //
@@ -283,16 +303,19 @@
   _.flatten = function(nestedArray, result) {
   };
 
+  /*************************************** */
   // Takes an arbitrary number of arrays and produces an array that contains
   // every item shared between all the passed-in arrays.
   _.intersection = function() {
   };
 
+  /*************************************** */
   // Take the difference between one array and a number of other arrays.
   // Only the elements present in just the first array will remain.
   _.difference = function(array) {
   };
 
+  /*************************************** */
   // Returns a function, that, when invoked, will only be triggered at most once
   // during a given window of time.  See the Underbar readme for extra details
   // on this function.
