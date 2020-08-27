@@ -176,6 +176,16 @@
   //   }); // should be 5, regardless of the iterator function passed in
   //          No accumulator is given so the first element is used.
   _.reduce = function(collection, iterator, accumulator) {
+    var noAcc = arguments.length === 2;
+    _.each(collection, function(el) {
+      if (noAcc === true) {
+        noAcc = false;
+        accumulator = el;
+      } else {
+        accumulator = iterator(accumulator, el);
+      }
+    });
+    return accumulator;
   };
 
   /*************************************** */
