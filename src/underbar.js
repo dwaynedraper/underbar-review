@@ -313,21 +313,16 @@
   // instead if possible.
   _.memoize = function(func) {
     let cache = {};
-    let results = [];
-
-
 
     return function() {
-      let args = [...arguments];
-      for (let value of args) {
-        if (cache[value]) {
-          return cache[value];
-        } else {
-          
-        }
+      let args = JSON.stringify(arguments);
+      if (!(args in cache)) {
+        cache[args] = func.apply(this, arguments);
       }
+      return cache[args];
     };
   };
+
 
   /*************************************** */
   // Delays a function for the given number of milliseconds, and then calls
