@@ -389,6 +389,24 @@
   // of that string. For example, _.sortBy(people, 'name') should sort
   // an array of people by their name.
   _.sortBy = function(collection, iterator) {
+    for (var i = 0; i < collection.length; i++) {
+      for (var j = i; j < collection.length; j++) {
+        var first = collection[i];
+        var second = collection[j];
+        var isBigger;
+        if (typeof iterator === 'string') {
+          isBigger = first[iterator] > second[iterator];
+        } else {
+          isBigger = iterator(first) > iterator(second);
+        }
+
+        if (isBigger) {
+          var temp = second;
+          collection[j] = first;
+          collection[i] = temp;
+        }
+      }
+    }
   };
 
   /*************************************** */
