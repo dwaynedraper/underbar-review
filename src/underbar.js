@@ -312,6 +312,21 @@
   // already computed the result for the given argument and return that value
   // instead if possible.
   _.memoize = function(func) {
+    let cache = {};
+    let results = [];
+
+
+
+    return function() {
+      let args = [...arguments];
+      for (let value of args) {
+        if (cache[value]) {
+          return cache[value];
+        } else {
+          
+        }
+      }
+    };
   };
 
   /*************************************** */
