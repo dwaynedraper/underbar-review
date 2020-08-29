@@ -394,7 +394,9 @@
         var first = collection[i];
         var second = collection[j];
         var isBigger;
-        if (typeof iterator === 'string') {
+        if (typeof first === 'undefined') {
+          isBigger = true;
+        } else if (typeof iterator === 'string') {
           isBigger = first[iterator] > second[iterator];
         } else {
           isBigger = iterator(first) > iterator(second);
@@ -407,6 +409,7 @@
         }
       }
     }
+    return collection;
   };
 
   /*************************************** */
